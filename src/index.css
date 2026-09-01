@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 30s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 30s) linear infinite;
+}
+
+@theme {
+  --color-off-white: #F7F4F1;
+  --color-brand-dark: #314B3F;
+  --color-brand-sage: #5F816C;
+  --color-brand-terracota: #D98F7C;
+  --color-brand-terracota-hover: #C57E6B;
+  --color-brand-rose: #DCB2A6;
+  --color-brand-gray: #E2DFDE;
+  
+  /* Mappings for existing theme utilities */
+  --color-brand-purple: #314B3F;
+  --color-brand-purple-light: #F7F4F1;
+  --color-brand-purple-dark: #24382F;
+  --color-brand-green: #314B3F;
+  --color-surface: #F7F4F1;
+  --font-serif: 'Katha', 'Katha Latin', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: #F7F4F1;
+    color: #1F2922;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-serif, .font-title {
+    font-family: 'Katha', 'Katha Latin', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+}
+
+.bg-quarter-circle-pattern {
+  background-color: #F7F4F1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M0 0h480v480H0z M120 0v480 M240 0v480 M360 0v480 M0 120h480 M0 240h480 M0 360h480' stroke='%23314B3F' stroke-opacity='0.05' stroke-width='0.8'/%3E%3Cpath d='M0 120A120 120 0 0 1 120 0' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M0 60A60 60 0 0 1 60 0' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M120 0A120 120 0 0 1 240 120' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M180 0A60 60 0 0 1 240 60' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M240 0A120 120 0 0 0 360 120' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M240 60A60 60 0 0 0 300 120' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M360 120A120 120 0 0 1 480 0' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M420 120A60 60 0 0 1 480 60' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M0 120A120 120 0 0 0 120 240' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M0 180A60 60 0 0 0 60 240' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M120 240A120 120 0 0 1 240 120' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M180 240A60 60 0 0 1 240 180' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M240 240A120 120 0 0 1 360 120' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M240 180A60 60 0 0 1 300 120' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M360 120A120 120 0 0 1 480 240' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M420 120A60 60 0 0 1 480 180' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M0 240A120 120 0 0 1 120 360' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M60 240A60 60 0 0 1 120 300' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M120 240A120 120 0 0 0 240 360' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M120 300A60 60 0 0 0 180 360' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M240 360A120 120 0 0 1 360 240' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M300 360A60 60 0 0 1 360 300' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M360 360A120 120 0 0 1 480 240' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M360 300A60 60 0 0 1 420 240' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M0 480A120 120 0 0 1 120 360' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M60 480A60 60 0 0 1 120 420' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M120 480A120 120 0 0 1 240 360' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M120 420A60 60 0 0 1 180 360' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M240 360A120 120 0 0 1 360 480' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M300 360A60 60 0 0 1 360 420' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M360 360A120 120 0 0 0 480 480' stroke='%235F816C' stroke-opacity='0.08' stroke-width='1.2'/%3E%3Cpath d='M360 420A60 60 0 0 0 420 480' stroke='%23DCB2A6' stroke-opacity='0.1' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 240px 240px;
+}
+
+.gradient-overlay {
+  background: linear-gradient(180deg, rgba(95, 129, 108, 0.05) 0%, rgba(247, 244, 241, 1) 100%);
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #5F816C;
+  font-weight: bold;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #5F816C40;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5F816C80;
+}
