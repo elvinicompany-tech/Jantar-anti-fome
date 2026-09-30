@@ -17,18 +17,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayVideo, onOpenChe
         {/* TAG */}
         <div className="inline-block mb-4">
           <span className="bg-[#314B3F]/10 text-[#314B3F] text-xs sm:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full border border-[#314B3F]/15">
-            MÉTODO JANTAR ANTI-FOME
+            JANTAR ANTI-FOME
           </span>
         </div>
 
         {/* HEADLINE */}
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-[#314B3F] leading-[1.15] sm:leading-[1.1] mb-5 sm:mb-6 max-w-4xl mx-auto">
-          Controle a <span className="italic font-normal text-[#D98F7C]">fome noturna</span> começando pelo seu jantar.
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-[#314B3F] leading-[1.18] sm:leading-[1.12] mb-5 sm:mb-6 max-w-4xl mx-auto">
+          O método do jantar que ajuda a <span className="text-[#314B3F]">controlar a fome à noite</span>{' '}
+          <span className="italic font-normal text-[#D98F7C]">— e a vontade de beliscar no dia seguinte.</span>
         </h1>
 
         {/* SUBHEADLINE */}
-        <p className="text-base sm:text-lg md:text-xl text-[#1F2922]/85 mb-6 sm:mb-8 max-w-2xl mx-auto font-normal leading-relaxed px-2 sm:px-0">
-          Descubra como montar um jantar simples e estratégico para aumentar a saciedade e reduzir a vontade de continuar comendo à noite — sem dietas extremas e sem depender apenas de força de vontade.
+        <p className="text-base sm:text-lg md:text-xl text-[#1F2922]/85 mb-6 sm:mb-8 max-w-3xl mx-auto font-normal leading-relaxed px-2 sm:px-0">
+          Um método de jantar estratégico que não transforma apenas a sua noite: ele reequilibra a sua saciedade para você ter controle sobre a comida e fazer escolhas muito mais fáceis e leves durante todo o dia seguinte.
         </p>
 
         {/* Video Placeholder Container (VSL) */}

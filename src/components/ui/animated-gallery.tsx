@@ -53,7 +53,7 @@ export const ContainerScroll = ({
   className,
   style,
   ...props
-}: React.HtmlHTMLAttributes<HTMLDivElement>) => {
+}: React.HTMLAttributes<HTMLDivElement>) => {
   const scrollRef = React.useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: scrollRef,

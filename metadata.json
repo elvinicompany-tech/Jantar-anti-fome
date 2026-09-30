@@ -1,6 +1,6 @@
 {
   "name": "Jantar anti-fome.ofc",
-  "description": "",
+  "description": "Jantar Anti-Fome: O método do jantar que ajuda a controlar a fome à noite — e a vontade de beliscar no dia seguinte.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

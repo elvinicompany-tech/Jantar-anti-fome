@@ -8,7 +8,11 @@ export const WhatsAppFloatingButton: React.FC = () => {
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     const text = encodeURIComponent(message || 'Olá, gostaria de tirar dúvidas sobre o Método Jantar Anti-Fome da Dra. Betisa.');
-    window.open(`https://wa.me/5511999999999?text=${text}`, '_blank');
+    try {
+      window.open(`https://wa.me/5511999999999?text=${text}`, '_blank', 'noopener,noreferrer');
+    } catch {
+      window.location.href = `https://wa.me/5511999999999?text=${text}`;
+    }
     setIsOpen(false);
   };
 

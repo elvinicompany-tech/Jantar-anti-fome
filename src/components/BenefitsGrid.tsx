@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Sparkles, Cookie, HeartHandshake, ShieldCheck, ChevronDown, ChevronUp, Microscope } from 'lucide-react';
 import { WHY_IMPORTANT_POINTS } from '../data';
 
-export const BenefitsGrid: React.FC = () => {
+interface BenefitsGridProps {
+  onOpenCheckout?: () => void;
+}
+
+export const BenefitsGrid: React.FC<BenefitsGridProps> = ({ onOpenCheckout }) => {
   const [showScience, setShowScience] = useState(false);
 
   const benefitsCards = [

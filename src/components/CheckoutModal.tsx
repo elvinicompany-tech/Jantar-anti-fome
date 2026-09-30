@@ -10,16 +10,19 @@ interface CheckoutModalProps {
 export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
   const [coupon, setCoupon] = useState('');
   const [couponApplied, setCouponApplied] = useState(false);
+  const [couponError, setCouponError] = useState('');
   const [installments, setInstallments] = useState(12);
 
   if (!isOpen) return null;
 
   const handleApplyCoupon = (e: React.FormEvent) => {
     e.preventDefault();
+    setCouponError('');
     if (coupon.trim().toUpperCase() === 'BETISA10' || coupon.trim().toUpperCase() === 'ANTIFOME') {
       setCouponApplied(true);
+      setCouponError('');
     } else {
-      alert('Cupom inválido. Use "BETISA10" para testar o cupom de 10% de desconto!');
+      setCouponError('Cupom inválido. Dica: use "BETISA10" para 10% de desconto!');
     }
   };
 
@@ -74,21 +77,29 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
           </div>
 
           {/* Coupon test */}
-          <form onSubmit={handleApplyCoupon} className="flex gap-2">
-            <input
-              type="text"
-              placeholder="Tem cupom? Ex: BETISA10"
-              value={coupon}
-              onChange={(e) => setCoupon(e.target.value)}
-              className="flex-1 px-4 py-2 text-sm border border-[#BDB8B8] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#607F6D]"
-            />
-            <button
-              type="submit"
-              className="px-4 py-2 bg-[#607F6D]/15 text-[#314B3F] font-semibold text-xs rounded-xl hover:bg-[#607F6D]/25 transition-colors cursor-pointer"
-            >
-              Aplicar
-            </button>
-          </form>
+          <div>
+            <form onSubmit={handleApplyCoupon} className="flex gap-2">
+              <input
+                type="text"
+                placeholder="Tem cupom? Ex: BETISA10"
+                value={coupon}
+                onChange={(e) => setCoupon(e.target.value)}
+                className="flex-1 px-4 py-2 text-sm border border-[#BDB8B8] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#607F6D]"
+              />
+              <button
+                type="submit"
+                className="px-4 py-2 bg-[#607F6D]/15 text-[#314B3F] font-semibold text-xs rounded-xl hover:bg-[#607F6D]/25 transition-colors cursor-pointer"
+              >
+                Aplicar
+              </button>
+            </form>
+            {couponError && (
+              <p className="text-xs text-rose-600 mt-1.5 font-medium">{couponError}</p>
+            )}
+            {couponApplied && (
+              <p className="text-xs text-[#5F816C] mt-1.5 font-semibold">✓ Cupom BETISA10 aplicado com sucesso (10% OFF)!</p>
+            )}
+          </div>
 
           {/* Installments Option */}
           <div>
