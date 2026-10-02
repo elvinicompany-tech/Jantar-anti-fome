@@ -53,10 +53,10 @@ export const WhyImportantSection: React.FC<WhyImportantSectionProps> = ({ onOpen
               <Moon className="w-5 h-5 text-[#314B3F]" />
             </div>
             <h3 className="font-serif font-bold text-[#314B3F] text-xl mb-2">
-              3. Noites Tranquilas e Sem Culpa
+              3. Corpo Mais Leve e Sem Culpa
             </h3>
             <p className="text-sm text-[#1F2922]/85 leading-relaxed">
-              Você termina o dia satisfeita, dorme melhor e acorda no dia seguinte com mais disposição, sem a sensação de ter exagerado.
+              Você termina o dia satisfeita, dorme em sono profundo e acorda no dia seguinte sentindo o corpo mais leve e desinchado, com seu metabolismo trabalhando a seu favor em vez de acumular calorias.
             </p>
           </div>
         </div>

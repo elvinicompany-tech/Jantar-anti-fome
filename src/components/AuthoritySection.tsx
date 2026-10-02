@@ -11,7 +11,7 @@ export const AuthoritySection: React.FC<AuthoritySectionProps> = ({ onOpenChecko
     <section className="py-16 sm:py-20 bg-white border-b border-[#E2DFDE]" id="sobre-betisa">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <HeroSection
-          slogan="SUA MENTORA NESSA JORNADA"
+          slogan="SUA NUTRICIONISTA NESSA JORNADA"
           title="Dra. Betisa Vitisin"
           subtitle="Especialista em Emagrecimento Feminino e Saúde da Mulher"
           description={

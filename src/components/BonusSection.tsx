@@ -41,7 +41,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onOpenCheckout }) =>
                       GRÁTIS
                     </span>
                   </div>
-                  <h3 className="font-serif font-bold text-[#314B3F] text-lg mb-2">
+                  <h3 className="font-sans font-bold text-[#314B3F] text-lg sm:text-[1.15rem] leading-snug mb-2">
                     {bonus.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#1F2922]/85 leading-relaxed font-normal">

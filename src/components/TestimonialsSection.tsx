@@ -61,7 +61,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
             Veja o que outras mulheres relataram
           </h2>
           <p className="text-base sm:text-lg text-[#1F2922]/85 font-normal leading-relaxed">
-            Experiências reais de mulheres que começaram a mudar a relação com a alimentação e com as próprias noites.
+            São + de 10.000 mulheres que pararam de viver reféns da fome noturna que sabota a saúde e o emagrecimento. Esses são apenas alguns relatos.
           </p>
         </div>
 

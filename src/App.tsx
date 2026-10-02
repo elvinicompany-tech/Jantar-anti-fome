@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { RepositionSection } from './components/RepositionSection';
-import { WhyImportantSection } from './components/WhyImportantSection';
-import { BenefitsGrid } from './components/BenefitsGrid';
 import { TestimonialsSection } from './components/TestimonialsSection';
+import { BenefitsGrid } from './components/BenefitsGrid';
 import { MethodIntroSection } from './components/MethodIntroSection';
 import { CourseModules } from './components/CourseModules';
 import { PlatformDeliverablesSection } from './components/PlatformDeliverablesSection';
@@ -50,19 +49,16 @@ export default function App() {
         {/* 02 — REPOSICIONAMENTO */}
         <RepositionSection onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
 
-        {/* 03 — MECANISMO: POR QUE O JANTAR É A REFEIÇÃO MAIS IMPORTANTE */}
-        <WhyImportantSection onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
-
-        {/* 04 — BENEFÍCIOS DO MÉTODO JANTAR ANTI-FOME */}
-        <BenefitsGrid onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
-
-        {/* 05 — PROVA SOCIAL / DEPOIMENTOS */}
+        {/* 03 — PROVA SOCIAL / DEPOIMENTOS */}
         <TestimonialsSection
           onOpenImageLightbox={(url) => setLightboxImageUrl(url)}
           onOpenCheckout={() => setIsCheckoutModalOpen(true)}
         />
 
-        {/* 06 — APRESENTAÇÃO DO MÉTODO */}
+        {/* 04 — PRINCIPAIS BENEFÍCIOS DO MÉTODO */}
+        <BenefitsGrid onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
+
+        {/* 05 — APRESENTAÇÃO DO MÉTODO */}
         <MethodIntroSection onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
 
         {/* 07 — AS 5 FASES DO MÉTODO JANTAR ANTI-FOME */}

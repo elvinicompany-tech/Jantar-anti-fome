@@ -34,12 +34,12 @@ export const RepositionSection: React.FC<RepositionSectionProps> = ({ onOpenChec
                 Então o problema pode não ser falta de disciplina.
               </p>
               <p className="text-[#1F2922]/90 text-sm sm:text-base leading-relaxed mt-1">
-                Pode ser que você esteja chegando ao momento mais difícil do dia sem uma estratégia alimentar que realmente sustente você.
+                Pode ser que você esteja chegando ao momento mais difícil do dia sem uma estratégia que controle sua fome e vontade de comer.
               </p>
             </div>
 
             <p className="text-[#314B3F] font-medium text-sm sm:text-base leading-relaxed">
-              O <strong className="text-[#314B3F]">Jantar Anti-Fome</strong> ensina como organizar uma refeição simples e satisfatória pensando também nas horas que vêm depois dela.
+              O <strong className="text-[#314B3F]">Jantar Anti-Fome</strong> ensina a combinar alimentos e suplementos em uma refeição prática e gostosa para aumentar a saciedade e ajudar a lidar com a fome emocional.
             </p>
 
             {/* Key Pillars */}

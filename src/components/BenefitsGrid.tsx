@@ -12,23 +12,23 @@ export const BenefitsGrid: React.FC<BenefitsGridProps> = ({ onOpenCheckout }) =>
   const benefitsCards = [
     {
       icon: Sparkles,
-      title: 'Mais saciedade',
-      desc: 'Aprenda a montar uma refeição que ajude você a terminar o jantar realmente satisfeita.'
+      title: 'Saciedade profunda e duradoura',
+      desc: 'Aprenda a combinação de nutrientes que sacia de verdade, para você terminar o jantar satisfeita e sem vontade de rondar a cozinha.'
     },
     {
       icon: Cookie,
-      title: 'Menos vontade de beliscar',
-      desc: 'Organize o jantar pensando também naquelas horas em que normalmente aparece a vontade de continuar comendo.'
+      title: 'Fim dos beliscos noturnos',
+      desc: 'Desligue os gatilhos da fome após as 20h para seu corpo parar de acumular calorias na madrugada e relaxar em paz.'
     },
     {
       icon: HeartHandshake,
-      title: 'Menos desejo por doces',
-      desc: 'Entenda como diferentes combinações alimentares podem influenciar sua saciedade e suas escolhas depois do jantar.'
+      title: 'Corpo mais leve e desinchado ao acordar',
+      desc: 'Ao jantar de forma estratégica, seu corpo desinflama durante o sono para você acordar sentindo a barriga mais leve e as roupas mais confortáveis.'
     },
     {
       icon: ShieldCheck,
-      title: 'Uma noite mais equilibrada',
-      desc: 'Crie uma rotina alimentar mais previsível e sustentável, sem depender de dietas extremamente restritivas.'
+      title: 'Paz com a balança e com o espelho',
+      desc: 'Recupere o controle natural sobre a comida, fazendo as pazes com o seu reflexo matinal sem precisar de dietas restritivas.'
     }
   ];
 

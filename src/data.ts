@@ -178,13 +178,13 @@ export const BONUSES: BonusItem[] = [
 
 export const FOR_WHOM_YES = [
   'Já perdeu a conta de quantas vezes acordou com fome antes da hora e quer entender a causa hormonal disso, não só "se esforçar mais"',
-  'Já tentou dieta, remédio e nada durou a longo prazo, porque nenhum deles calculava o jantar certo',
-  'Se pega descontando emoção na comida à noite e quer entender o que está por trás disso, não só se culpar de novo',
-  'Acha que "comer saudável no jantar" é suficiente e não sabe que existe uma equação por trás disso',
-  'Quer praticidade pra montar o jantar, mas sem abrir mão do resultado de emagrecimento saudável.',
-  'Quer ativar os mesmos hormônios das canetas emagrecedoras (Monjauro, Ozempic) sem precisar investir R$ 4.000 por mês',
+  'Já tentou dietas restritivas e nada durou a longo prazo, porque nenhuma ensinava a combinação certa para a noite',
+  'Se pega descontando emoção na comida à noite e quer entender o que está por trás disso, sem mais culpa ou frustração',
+  'Acha que "comer saudável no jantar" é suficiente e não sabe que existe uma proporção nutricional exata por trás da saciedade',
+  'Quer praticidade para montar o jantar e ver o corpo responder rápido, desinchando com saúde e sem passar fome',
+  'Quer ativar a queima e a saciedade natural do próprio corpo durante a noite, sem depender de injeções caras ou remédios com efeito sanfona',
   'Quer viver o pós-menopausa com saúde e autoestima, entendendo o que realmente acontece com seus hormônios à noite',
-  'Quer emagrecer sem sofrimento e não precisar emagrecer nunca mais.'
+  'Quer desinflamar de verdade, acordar mais leve todos os dias e recuperar a segurança ao se olhar no espelho e vestir suas roupas favoritas'
 ];
 
 export const FOR_WHOM_NO = [

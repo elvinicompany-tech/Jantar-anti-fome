@@ -23,13 +23,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayVideo, onOpenChe
 
         {/* HEADLINE */}
         <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-[#314B3F] leading-[1.18] sm:leading-[1.12] mb-5 sm:mb-6 max-w-4xl mx-auto">
-          O método do jantar que ajuda a <span className="text-[#314B3F]">controlar a fome à noite</span>{' '}
-          <span className="italic font-normal text-[#D98F7C]">— e a vontade de beliscar no dia seguinte.</span>
+          O Método que tira sua fome da noite, tira a sua vontade de beliscar{' '}
+          <span className="italic font-normal text-[#D98F7C]">e de comer compulsivamente no dia seguinte.</span>
         </h1>
 
         {/* SUBHEADLINE */}
         <p className="text-base sm:text-lg md:text-xl text-[#1F2922]/85 mb-6 sm:mb-8 max-w-3xl mx-auto font-normal leading-relaxed px-2 sm:px-0">
-          Um método de jantar estratégico que não transforma apenas a sua noite: ele reequilibra a sua saciedade para você ter controle sobre a comida e fazer escolhas muito mais fáceis e leves durante todo o dia seguinte.
+          O Jantar Anti-Fome é para você que não consegue jantar seguindo uma dieta. É um método que vai te ajudar emagrecer sem dietas, sem passar fome, usando 3 ajustes simples no seu jantar que você aplica em casa, no restaurante ou até no Ifood.
         </p>
 
         {/* Video Placeholder Container (VSL) */}

@@ -18,7 +18,7 @@ export const MethodIntroSection: React.FC<MethodIntroSectionProps> = ({ onOpenCh
             O Método Jantar Anti-Fome
           </h2>
           <p className="text-[#1F2922]/85 mt-3 max-w-2xl mx-auto text-base sm:text-lg font-normal leading-relaxed">
-            Um passo a passo para você organizar o seu jantar, ter mais saciedade e parar de sofrer com a fome noturna.
+            Um passo a passo para você jantar sem culpa e sem sabotar o seu emagrecimento
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export const MethodIntroSection: React.FC<MethodIntroSectionProps> = ({ onOpenCh
               </li>
               <li className="flex items-start gap-3 text-sm sm:text-base text-[#1F2922]/90">
                 <Check className="w-5 h-5 text-[#314B3F] flex-shrink-0 mt-0.5" />
-                <span><strong>Liberdade e autonomia</strong> para você saber o que comer sem culpa nem ansiedade.</span>
+                <span><strong>Uma estratégia</strong> para montar seu jantar de forma a favorecer o controle da glicose.</span>
               </li>
             </ul>
           </div>
