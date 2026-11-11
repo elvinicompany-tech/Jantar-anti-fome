@@ -19,13 +19,11 @@ import { Footer } from './components/Footer';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 
 // Modals
-import { VideoModal } from './components/VideoModal';
 import { ImageLightboxModal } from './components/ImageLightboxModal';
 import { CheckoutModal } from './components/CheckoutModal';
 import { MetabolicQuizModal } from './components/MetabolicQuizModal';
 
 export default function App() {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [lightboxImageUrl, setLightboxImageUrl] = useState<string | null>(null);
   const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
@@ -42,7 +40,6 @@ export default function App() {
       <main>
         {/* 01 — HEADLINE + SUB + VSL + CTA */}
         <HeroSection
-          onPlayVideo={() => setIsVideoModalOpen(true)}
           onOpenCheckout={() => setIsCheckoutModalOpen(true)}
         />
 
@@ -96,12 +93,6 @@ export default function App() {
       <Footer />
 
       {/* Modals & Overlays */}
-      <VideoModal
-        isOpen={isVideoModalOpen}
-        onClose={() => setIsVideoModalOpen(false)}
-        onOpenCheckout={() => setIsCheckoutModalOpen(true)}
-      />
-
       <ImageLightboxModal
         imageUrl={lightboxImageUrl}
         onClose={() => setLightboxImageUrl(null)}

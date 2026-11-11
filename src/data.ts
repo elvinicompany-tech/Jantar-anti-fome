@@ -1,5 +1,8 @@
 import { Testimonial, CourseModule, BonusItem, FAQItem, DominoStep } from './types';
 
+// Vídeo principal da VSL (Vimeo)
+export const VSL_VIMEO_ID = '1245792419';
+
 export const IMAGES = {
   heroVideo: 'https://lh3.googleusercontent.com/d/1GST_I3fpBdKL8gvITgXllktDt1BKvX2f',
   carlessa: 'https://lh3.googleusercontent.com/aida/AP1WRLs-aeQ4WdGRp2TLgr-MytBD0Yn6Fm5VlCnabGleFvSqwIYRPHueXMh6qBJCj4wjXPhhxW0LOcjdfeLvu-XF_ODn-agczVqYxoTKKqrs1njw63_GL2S_CVL9ys467-ubTDLjOpYehJKhZNQL6AE1fIpTtj4PF7IdIMy69LGy5W7JUxiUKE97RQZxSCnuRl1TeXMo9uRalTC4EgeU8ILkHaICP_vZpQfwgmUsxPtAd_eDTzArmCtURXv0venp',
