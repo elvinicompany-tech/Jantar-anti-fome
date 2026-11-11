@@ -23,10 +23,32 @@ import { ImageLightboxModal } from './components/ImageLightboxModal';
 import { CheckoutModal } from './components/CheckoutModal';
 import { MetabolicQuizModal } from './components/MetabolicQuizModal';
 
+const VSL_UNLOCK_FRACTION = 0.9;
+const VSL_UNLOCK_KEY = 'jaf-vsl-liberada';
+
 export default function App() {
   const [lightboxImageUrl, setLightboxImageUrl] = useState<string | null>(null);
   const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
+
+  // O restante da página de vendas aparece depois que a cliente assiste a 90% da VSL.
+  // Quem já liberou antes (mesmo navegador) vê a página completa direto.
+  const [isPageUnlocked, setIsPageUnlocked] = useState(() => {
+    try {
+      return localStorage.getItem(VSL_UNLOCK_KEY) === '1';
+    } catch {
+      return false;
+    }
+  });
+  const handleVideoProgress = (fraction: number) => {
+    if (isPageUnlocked || fraction < VSL_UNLOCK_FRACTION) return;
+    setIsPageUnlocked(true);
+    try {
+      localStorage.setItem(VSL_UNLOCK_KEY, '1');
+    } catch {
+      /* navegação privada: libera só nesta visita */
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#F7F4F1] font-sans text-[#1F2922] antialiased selection:bg-[#5F816C]/20 selection:text-[#314B3F]">
@@ -34,6 +56,7 @@ export default function App() {
       <Header
         onOpenCheckout={() => setIsCheckoutModalOpen(true)}
         onOpenQuiz={() => setIsQuizModalOpen(true)}
+        locked={!isPageUnlocked}
       />
 
       {/* Main Page Flow - Sections 01 to 16 */}
@@ -41,7 +64,12 @@ export default function App() {
         {/* 01 — HEADLINE + SUB + VSL + CTA */}
         <HeroSection
           onOpenCheckout={() => setIsCheckoutModalOpen(true)}
+          unlocked={isPageUnlocked}
+          onVideoProgress={handleVideoProgress}
         />
+
+        {isPageUnlocked && (
+        <div className="animate-fadeIn">
 
         {/* 02 — REPOSICIONAMENTO */}
         <RepositionSection onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
@@ -87,10 +115,12 @@ export default function App() {
 
         {/* 16 — RODAPÉ / FOOTER CTA & FOOTER */}
         <FooterCTA onOpenCheckout={() => setIsCheckoutModalOpen(true)} />
+        </div>
+        )}
       </main>
 
       {/* Footer */}
-      <Footer />
+      {isPageUnlocked && <Footer />}
 
       {/* Modals & Overlays */}
       <ImageLightboxModal
