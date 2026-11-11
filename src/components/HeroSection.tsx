@@ -1,12 +1,15 @@
 import React from 'react';
-import { CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
+import { CheckCircle2, Lock, ShieldCheck, Zap } from 'lucide-react';
 import { VslPlayer } from './VslPlayer';
 
 interface HeroSectionProps {
   onOpenCheckout: () => void;
+  /** A página só é liberada depois que a cliente assiste à VSL. */
+  unlocked: boolean;
+  onVideoProgress: (fraction: number) => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, unlocked, onVideoProgress }) => {
   return (
     <section className="relative pt-8 pb-16 overflow-hidden bg-quarter-circle-pattern border-b border-[#E2DFDE]">
       {/* Soft ambient gradient overlay */}
@@ -32,10 +35,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         </p>
 
         {/* VSL (sem pausa) */}
-        <VslPlayer />
+        <VslPlayer onProgress={onVideoProgress} />
 
-        {/* Main Terracota CTA Below Video */}
-        <div className="space-y-4 px-2 sm:px-0">
+        {/* Aviso enquanto a página está bloqueada */}
+        {!unlocked && (
+          <div className="max-w-xl mx-auto flex items-start gap-3 text-left bg-white/80 border border-[#DCB2A6]/60 rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4 shadow-sm">
+            <div className="w-9 h-9 rounded-full bg-[#D98F7C]/15 flex items-center justify-center flex-shrink-0">
+              <Lock className="w-4 h-4 text-[#D98F7C]" />
+            </div>
+            <div>
+              <p className="text-sm sm:text-base font-semibold text-[#314B3F]">
+                Assista ao vídeo até o final para continuar.
+              </p>
+              <p className="text-xs sm:text-sm text-[#1F2922]/75 mt-0.5 leading-relaxed">
+                Logo depois, o restante da página é liberado aqui embaixo, com o método completo, os bônus e a condição especial.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Main Terracota CTA Below Video (aparece junto com o resto da página) */}
+        {unlocked && (
+        <div className="space-y-4 px-2 sm:px-0 animate-fadeIn">
           <a
             href="#precos"
             onClick={(e) => {
@@ -65,6 +86,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             </span>
           </div>
         </div>
+        )}
       </div>
     </section>
   );
